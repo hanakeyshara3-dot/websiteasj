@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrasi Sistem Jaringan XII TKJ D</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Variabel Warna & Font --- */
+        :root {
+            --color-dark: #1e1e2f;
+            --color-accent: #00bcd4; /* Cyan Terang */
+            --color-secondary: #ff9800; /* Oranye */
+            --color-light: #f4f4f9;
+            --font-title: 'Montserrat', sans-serif;
+            --font-body: 'Roboto Mono', monospace;
+        }
+
+        /* --- Styling Dasar --- */
+        body {
+            background-color: var(--color-dark);
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            color: var(--color-light);
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: #2c2c43;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 5px solid var(--color-accent);
+        }
+
+        header h1 {
+            font-family: var(--font-title);
+            font-size: 2.5em;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* --- Kartu Profil (Pusat Perhatian) --- */
+        .profile-card {
+            background-color: #2c2c43;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            border: 1px solid rgba(0, 188, 212, 0.3); /* Border samar */
+            transition: all 0.3s ease;
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 15px 45px rgba(0, 188, 212, 0.4); /* Efek glow saat hover */
+            transform: translateY(-5px);
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 5px solid var(--color-secondary); /* Border oranye */
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.6); /* Glow oranye */
+        }
+
+        .profile-card h2 {
+            font-family: var(--font-title);
+            color: var(--color-light);
+            margin-top: 5px;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: var(--color-accent);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        /* --- Detail Section --- */
+        .details-section {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #383858;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .details-section h3 {
+            font-family: var(--font-title);
+            color: var(--color-secondary);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+        }
+
+        /* List Styling (Identitas dan Hobi) */
+        .details-section ul, .details-section ol {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        
+        .details-section ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .details-section ul li::before {
+            content: '>'; /* Menggunakan simbol terminal/prompt */
+            color: var(--color-accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .details-section ol {
+             list-style-type: decimal; /* Hobi tetap pakai nomor */
+             color: var(--color-light);
+        }
+        
+        .details-section ol li {
+            margin-bottom: 8px;
+            color: var(--color-light);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: var(--color-secondary);
+            margin: 40px 0;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+        }
+
+        /* --- Cita-cita --- */
+        .cita-cita-text {
+            color: var(--color-accent);
+            background-color: rgba(0, 188, 212, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1e1e2f;
+            color: var(--color-secondary);
+            margin-top: 40px;
+            border-top: 3px solid var(--color-secondary);
+        }
+        u{
+            font-family: cursive;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Administrasi Sistem Jaringan XII TKJ D</h1>
+    </header>
+
+    <main class="container">    
+        <section class="profile-card">
+            <img src="ghibli.jpg" class="profile-photo">
+            <h2><u>Dimas Fathrul Rahman</u></h2>
+            <p class="tagline">"When yh"</p>
+            <div class="details-section">
+                <h3>My Identitas Saya</h3>
+                <ul>
+                        <li><strong>Nama Lengkap:</strong> Dimas Fathrul Rahman</li>
+                    <li><strong>Kelas / Jurusan:</strong> XII TKJ D / Teknik Komputer dan Jaringan</li>
+                    <li><strong>Alamat:</strong> SRENGSENG</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="details-section">
+                <h3>Minat & Skillset</h3>
+                <ol>
+                    <li>Hobi :  Running</li>
+                    <li>Hobi :  Makan</li>
+                    <li>Hobi :  Minum</li>                   
+                    <li>Hobi :  Sleep</li>
+                </ol>
+            </div>
+            
+            <hr>
+
+            <div class="details-section">
+                <h3>Cita-cita (Destination Goal)</h3>
+                <p class="cita-cita-text">
+                    JADI PRESIDEN MAYBE
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Console Output Success: Profil Loaded. &copy; 2025 Dimas Fathrul Rahaman</p>
+    </footer>
+</body>
+</html>
